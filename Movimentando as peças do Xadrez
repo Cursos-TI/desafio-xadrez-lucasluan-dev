@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    // Variáveis com o número de casas que cada peça deve se mover
+    int casasTorre = 5;
+    int casasBispo = 5;
+    int casasRainha = 8;
+
+    int i; // variável de controle para os loops
+
+    // =========================
+    // Movimento da TORRE (for)
+    // =========================
+    printf("=== Movimento da Torre ===\n");
+    for (i = 1; i <= casasTorre; i++) {
+        printf("Direita (casa %d)\n", i);
+    }
+
+    // =========================
+    // Movimento do BISPO (while)
+    // =========================
+    printf("\n=== Movimento do Bispo ===\n");
+    i = 1; // reinicia o contador
+    while (i <= casasBispo) {
+        printf("Cima, Direita (casa %d)\n", i);
+        i++;
+    }
+
+    // =========================
+    // Movimento da RAINHA (do-while)
+    // =========================
+    printf("\n=== Movimento da Rainha ===\n");
+    i = 1; // reinicia o contador
+    do {
+        printf("Esquerda (casa %d)\n", i);
+        i++;
+    } while (i <= casasRainha);
+
+    return 0;
+}
